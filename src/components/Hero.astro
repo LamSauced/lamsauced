@@ -1,0 +1,37 @@
+---
+import { site } from '../data/site';
+import GitHubIcon from './icons/GitHubIcon.astro';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
+import MailIcon from './icons/MailIcon.astro';
+import PinIcon from './icons/PinIcon.astro';
+---
+
+<header class="hero" id="top">
+  <img
+    class="hero-avatar"
+    src={site.avatar}
+    alt={`Portrait of ${site.name}`}
+    width="104"
+    height="104"
+  />
+  <h1>{site.name}</h1>
+  <p class="tagline">{site.tagline}</p>
+  <p class="hero-loc">
+    <PinIcon />
+    {site.location}
+  </p>
+  <div class="hero-links">
+    <a class="btn btn-primary" href={`mailto:${site.email}`}>
+      <MailIcon />
+      Email me
+    </a>
+    <a class="btn" href={site.github} target="_blank" rel="noreferrer">
+      <GitHubIcon />
+      GitHub
+    </a>
+    <a class="btn" href={site.linkedin} target="_blank" rel="noreferrer">
+      <LinkedInIcon />
+      LinkedIn
+    </a>
+  </div>
+</header>

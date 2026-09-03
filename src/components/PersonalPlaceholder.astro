@@ -1,0 +1,15 @@
+---
+interface Props {
+  label: string;
+  hint: string;
+}
+
+const { label, hint } = Astro.props;
+---
+
+<div class="tile-placeholder">
+  <span>
+    {label}
+    <small>{hint}</small>
+  </span>
+</div>

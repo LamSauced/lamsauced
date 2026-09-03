@@ -1,0 +1,15 @@
+---
+import { awards } from '../data/awards';
+---
+
+<section class="section" id="awards">
+  <div class="section-head">
+    <h2>Awards &amp; Honors</h2>
+  </div>
+
+  <div class="awards-grid">
+    {awards.map((a) => (
+      <div class="award">{a}</div>
+    ))}
+  </div>
+</section>

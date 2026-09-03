@@ -1,0 +1,22 @@
+---
+import { skills } from '../data/skills';
+---
+
+<section class="section" id="skills">
+  <div class="section-head">
+    <h2>Skills</h2>
+  </div>
+
+  <div class="skills-grid">
+    {skills.map((g) => (
+      <div class="skill-group">
+        <h3>{g.group}</h3>
+        <div class="chips">
+          {g.items.map((i) => (
+            <span class="chip">{i}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

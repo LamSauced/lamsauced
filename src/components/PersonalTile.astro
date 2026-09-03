@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  src: string;
+  url?: string;
+}
+
+const { title, src, url } = Astro.props;
+---
+
+{
+  url ? (
+    <a class="tile" href={url} target="_blank" rel="noreferrer">
+      <img src={src} alt={title} loading="lazy" />
+      <span class="tile-caption">{title}</span>
+    </a>
+  ) : (
+    <div class="tile">
+      <img src={src} alt={title} loading="lazy" />
+      <span class="tile-caption">{title}</span>
+    </div>
+  )
+}

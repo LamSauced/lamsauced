@@ -1,0 +1,25 @@
+---
+import { education } from '../data/education';
+---
+
+<section class="section" id="education">
+  <div class="section-head">
+    <h2>Education</h2>
+  </div>
+
+  <div>
+    {education.map((e) => (
+      <div class="edu-item">
+        <div>
+          <strong>{e.school}</strong>
+          {e.detail ? <span> — {e.detail}</span> : null}
+          {e.note ? <span class="edu-note">{e.note}</span> : null}
+        </div>
+        <div class="edu-right">
+          {e.current ? <span class="badge">Current</span> : null}
+          <span class="dates">{e.dates}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

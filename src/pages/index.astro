@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Projects from '../components/Projects.astro';
+import Awards from '../components/Awards.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import Personal from '../components/Personal.astro';
+---
+
+<Layout>
+  <Hero />
+  <About />
+  <Experience />
+  <Education />
+  <Projects />
+  <Awards />
+  <Skills />
+  <Contact />
+  <Personal slot="personal" />
+</Layout>

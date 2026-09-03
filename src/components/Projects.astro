@@ -1,0 +1,27 @@
+---
+import { projects } from '../data/projects';
+import ExternalIcon from './icons/ExternalIcon.astro';
+---
+
+<section class="section" id="projects">
+  <div class="section-head">
+    <h2>Projects</h2>
+  </div>
+
+  <div class="project-grid">
+    {projects.map((p) => (
+      <a class="project-card" href={p.url} target="_blank" rel="noreferrer">
+        <span class="project-name">
+          {p.name}
+          <ExternalIcon />
+        </span>
+        <span class="project-desc">{p.description}</span>
+        <span class="tags">
+          {p.tags.map((t) => (
+            <span class="tag">{t}</span>
+          ))}
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

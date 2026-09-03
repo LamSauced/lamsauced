@@ -1,0 +1,140 @@
+---
+import { site } from '../data/site';
+import { themes, systemLightTheme, systemDarkTheme } from '../themes/index';
+import '../themes/porcelain.css';
+import '../themes/graphite.css';
+import '../styles/global.css';
+
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#awards', label: 'Awards' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{site.name} — Computer Science Student</title>
+    <meta name="description" content={`${site.name} · ${site.tagline} · ${site.location}. Resume, projects, and more.`} />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${site.name} — Computer Science Student`} />
+    <meta property="og:description" content={`${site.tagline} · ${site.location}`} />
+    <meta property="og:image" content={`${site.url}/avatar.png`} />
+    <meta property="og:url" content={site.url} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${site.name} — Computer Science Student`} />
+    <meta name="twitter:description" content={`${site.tagline} · ${site.location}`} />
+    <meta name="twitter:image" content={`${site.url}/avatar.png`} />
+
+    <script is:inline define:vars={{ lightTheme: systemLightTheme, darkTheme: systemDarkTheme }}>
+      (function () {
+        try {
+          var choice = localStorage.getItem('theme') || 'system';
+          var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var resolved = choice === 'system' ? (dark ? darkTheme : lightTheme) : choice;
+          document.documentElement.setAttribute('data-theme', resolved);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <img src={site.avatar} alt="" width="30" height="30" />
+        <span>{site.name}</span>
+      </a>
+      <nav class="topbar-nav" aria-label="Primary">
+        {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+        <a class="nav-personal" href="#personal">Personal</a>
+      </nav>
+      <div class="topbar-actions">
+        <select id="theme-select" class="theme-select" aria-label="Choose theme">
+          <option value="system">System</option>
+          {themes.map((t) => (
+            <option value={t.id}>
+              {t.name} ({t.scheme})
+            </option>
+          ))}
+        </select>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar">
+        <nav class="side-nav" aria-label="Sidebar">
+          {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+          <a class="nav-personal" href="#personal">Personal</a>
+        </nav>
+      </aside>
+
+      <main id="main">
+        <slot />
+      </main>
+
+      <section class="personal" id="personal">
+        <slot name="personal" />
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>
+          © {new Date().getFullYear()} {site.name} ·
+          <a href={site.github} target="_blank" rel="noreferrer">GitHub</a> ·
+          <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p>Built with Astro · Hosted on Cloudflare Pages</p>
+      </div>
+    </footer>
+
+    <script>
+      import { themes, resolveTheme } from '../themes/index';
+
+      const STORAGE_KEY = 'theme';
+      const select = document.getElementById('theme-select') as HTMLSelectElement | null;
+
+      if (select) {
+        const apply = (choice: string) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, choice);
+          } catch {
+            /* private mode */
+          }
+          document.documentElement.setAttribute('data-theme', resolveTheme(choice));
+        };
+
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (stored && (stored === 'system' || themes.some((t) => t.id === stored))) {
+            select.value = stored;
+          }
+        } catch {
+          /* private mode */
+        }
+
+        select.addEventListener('change', () => apply(select.value));
+
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        mq.addEventListener('change', () => {
+          let stored: string | null = null;
+          try {
+            stored = localStorage.getItem(STORAGE_KEY);
+          } catch {
+            /* private mode */
+          }
+          if ((stored ?? 'system') === 'system') apply('system');
+        });
+      }
+    </script>
+  </body>
+</html>

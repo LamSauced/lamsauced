@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+import GitHubIcon from './icons/GitHubIcon.astro';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
+import MailIcon from './icons/MailIcon.astro';
+---
+
+<section class="section" id="contact">
+  <div class="section-head">
+    <h2>Contact</h2>
+  </div>
+
+  <div class="contact-box">
+    <p>
+      The fastest way to reach me is email — or find me on GitHub and LinkedIn.
+    </p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href={`mailto:${site.email}`}>
+        <MailIcon />
+        {site.email}
+      </a>
+      <a class="btn" href={site.github} target="_blank" rel="noreferrer">
+        <GitHubIcon />
+        GitHub
+      </a>
+      <a class="btn" href={site.linkedin} target="_blank" rel="noreferrer">
+        <LinkedInIcon />
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>

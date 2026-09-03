@@ -1,0 +1,56 @@
+---
+import { albums, games, media } from '../data/personal';
+import PersonalTile from './PersonalTile.astro';
+import PersonalPlaceholder from './PersonalPlaceholder.astro';
+
+const addHint = 'add entries in src/data/personal.ts + files in public/personal/';
+---
+
+<div class="personal-inner">
+  <div class="section-head">
+    <h2>Personal</h2>
+  </div>
+  <p class="personal-intro">
+    Albums, games, and the stuff I make when I'm not writing code. This section
+    is a work in progress — more to come.
+  </p>
+
+  <div class="personal-sub">
+    <h3>Albums</h3>
+    <div class="tile-grid">
+      {albums.map((a) => (
+        <PersonalTile title={a.title} src={a.cover} />
+      ))}
+      {albums.length === 0 &&
+        [1, 2, 3].map((i) => (
+          <PersonalPlaceholder label={`Album ${i}`} hint={addHint} />
+        ))}
+    </div>
+  </div>
+
+  <div class="personal-sub">
+    <h3>Games</h3>
+    <div class="tile-grid">
+      {games.map((g) => (
+        <PersonalTile title={g.title} src={g.image ?? '/avatar.png'} url={g.url} />
+      ))}
+      {games.length === 0 &&
+        [1, 2].map((i) => (
+          <PersonalPlaceholder label={`Game ${i}`} hint={addHint} />
+        ))}
+    </div>
+  </div>
+
+  <div class="personal-sub">
+    <h3>Media</h3>
+    <div class="tile-grid">
+      {media.map((m) => (
+        <PersonalTile title={m.title} src={m.src} url={m.url} />
+      ))}
+      {media.length === 0 &&
+        [1, 2, 3].map((i) => (
+          <PersonalPlaceholder label={`Media ${i}`} hint={addHint} />
+        ))}
+    </div>
+  </div>
+</div>

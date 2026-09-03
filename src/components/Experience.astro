@@ -1,0 +1,62 @@
+---
+import { experience, type Role } from '../data/experience';
+import ChevronIcon from './icons/ChevronIcon.astro';
+
+const roleDates = (r: Role) => `${r.start} – ${r.end} · ${r.duration}`;
+---
+
+<section class="section" id="experience">
+  <div class="section-head">
+    <h2>Experience</h2>
+  </div>
+
+  {
+    experience.map((org) => (
+      <div class="org">
+        <div class="org-head">
+          <h3>{org.name}</h3>
+          <span class="org-loc">{org.location}</span>
+        </div>
+
+        {org.roles.map((role, i) =>
+          i === 0 ? (
+            <article class="role">
+              <div class="role-head">
+                <h4>{role.title}</h4>
+                <span class="dates">{roleDates(role)}</span>
+              </div>
+              {role.bullets.length > 0 && (
+                <ul>
+                  {role.bullets.map((b) => (
+                    <li>{b}</li>
+                  ))}
+                </ul>
+              )}
+            </article>
+          ) : (
+            <details class="role">
+              <summary>
+                <div class="role-head">
+                  <h4>{role.title}</h4>
+                  <span class="role-more-right">
+                    <span class="dates">{roleDates(role)}</span>
+                    <ChevronIcon />
+                  </span>
+                </div>
+              </summary>
+              <div class="role-body">
+                {role.bullets.length > 0 && (
+                  <ul>
+                    {role.bullets.map((b) => (
+                      <li>{b}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </details>
+          )
+        )}
+      </div>
+    ))
+  }
+</section>
