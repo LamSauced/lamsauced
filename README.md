@@ -25,7 +25,7 @@ In high school, I taught myself BrightScript over a summer at Roku and ended up 
 - **[ClubHub](https://github.com/LamSauced/ClubHub)** — a Roku TV app built during a summer internship at Roku; self-taught BrightScript and Scenegraph, coded ~80% of it.
 - **[2024-Code](https://github.com/2643/2024-Code)** — robot code for FRC 2024 "Crescendo", built as programming lead for Team 2643.
 - **[PoRTS](https://github.com/LamSauced/PoRTS)** — waveform generation and analysis in Python.
-- **[PoRTS](https://github.com/LamSauced/vidpipe)** — messing around with local AI inference and diffusion to generate videos.
+- **[vidpipe](https://github.com/LamSauced/vidpipe)** — messing around with local AI inference and diffusion to generate videos.
 
 ## Recognition
 
