@@ -6,11 +6,11 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     group: 'Programming',
-    items: ['Java', 'Python', 'BrightScript', 'Scenegraph'],
+    items: ['C++', 'Java', 'JavaScript', 'TypeScript', 'Python', 'PHP', 'HTML', 'CSS', 'SQL', 'BrightScript', 'Scenegraph'],
   },
   {
     group: 'Systems & Security',
-    items: ['Windows Server', 'Malware remediation', 'Network monitoring'],
+    items: ['Windows Server', 'Malware remediation', 'Network monitoring', 'x86 Assembly', 'MIPS Assembly'],
   },
   {
     group: 'Other',

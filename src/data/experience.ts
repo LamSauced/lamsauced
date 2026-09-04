@@ -22,7 +22,10 @@ export const experience: Organization[] = [
         start: 'Jan 2024',
         end: 'Jul 2024',
         duration: '7 months',
-        bullets: [],
+        bullets: [
+          'Mentored new interns during the summer 2024 internship program.',
+          'Studied React and deployed a React-based app with guides on BrightScript functionality for interns to use as a side project alongside mentoring duties.',
+        ],
       },
       {
         title: 'Software Programmer',
@@ -133,6 +136,15 @@ export const experience: Organization[] = [
     name: 'Boy Scouts of America',
     location: 'San Jose, CA',
     roles: [
+      {
+        title: 'Assistant Scoutmaster',
+        start: 'Aug 2024',
+        end: 'Jun 2026',
+        duration: '2 yrs',
+        bullets: [
+          'Served as assistant scoutmaster for two years while attending community college.',
+        ],
+      },
       {
         title: 'Senior Patrol Leader',
         start: 'Jan 2021',
