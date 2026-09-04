@@ -41,7 +41,7 @@ export const games: Game[] = [
   { title: 'Arknights', image: '/personal/games/arknights.jpg' }
 ];
 export const media: MediaItem[] = [
-  { title: 'Fate/Stay Night', kind: 'photo', src: '/personal/games/fate_stay_night.jpg' },
-  { title: 'Interstellar', kind: 'photo', src: '/personal/games/interstellar.jpg' },
-  { title: 'Chainsaw Man', kind: 'photo', src: '/personal/games/chainsaw_man.jpg' }
+  { title: 'Fate/Stay Night', kind: 'photo', src: '/personal/media/fate_stay_night.jpg' },
+  { title: 'Interstellar', kind: 'photo', src: '/personal/media/interstellar.jpg' },
+  { title: 'Chainsaw Man', kind: 'photo', src: '/personal/media/chainsaw_man.jpg' }
 ];
