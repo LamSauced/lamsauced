@@ -1,8 +1,8 @@
 # Lam Nguyen
 
-I like building things end to end.
+I like building things with computers (and building computers).
 
-I taught myself BrightScript over a summer at Roku and ended up coding most of a TV app. I lead programming for my FRC team, and I took my CyberPatriot team to a Platinum finish at the state round — the highest overall score of the year. These days I'm a computer science student at Cal Poly, SLO.
+In high school, I taught myself BrightScript over a summer at Roku and ended up coding most of a TV app. I led programming for my FRC team, and I helped take my CyberPatriot team to a Platinum finish at the state round — the highest overall score of the year. These days I'm a computer science student at Cal Poly SLO.
 
 [![website](https://img.shields.io/badge/website-lamsauced.pages.dev-0f766e?style=for-the-badge)](https://lamsauced.pages.dev)
 [![email](https://img.shields.io/badge/email-lnguyen0606%40outlook.com-2563eb?style=for-the-badge)](mailto:lnguyen0606@outlook.com)
@@ -11,7 +11,7 @@ I taught myself BrightScript over a summer at Roku and ended up coding most of a
 ## Currently
 
 - Studying **computer science** at Cal Poly San Luis Obispo — transferred from De Anza College
-- Working toward **Eagle Scout**
+- **Assistant Scoutmaster**
 - Bilingual — **English & Vietnamese**
 
 ## Toolbox
@@ -25,12 +25,14 @@ I taught myself BrightScript over a summer at Roku and ended up coding most of a
 - **[ClubHub](https://github.com/LamSauced/ClubHub)** — a Roku TV app built during a summer internship at Roku; self-taught BrightScript and Scenegraph, coded ~80% of it.
 - **[2024-Code](https://github.com/2643/2024-Code)** — robot code for FRC 2024 "Crescendo", built as programming lead for Team 2643.
 - **[PoRTS](https://github.com/LamSauced/PoRTS)** — waveform generation and analysis in Python.
+- **[PoRTS](https://github.com/LamSauced/vidpipe)** — messing around with local AI inference and diffusion to generate videos.
 
 ## Recognition
 
 - CyberPatriot State Round — **Platinum**, highest overall team score of the year
 - **AP Scholar with Distinction**
 - S4CA Product Showcase Award (×2) · MESA Award
+- LA Hacks Presenter
 
 ---
 
