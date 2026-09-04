@@ -31,6 +31,17 @@ export interface MediaItem {
  *     { title: 'Trip to Yosemite', cover: '/personal/albums/yosemite.png' },
  *   ];
  */
-export const albums: Album[] = [];
-export const games: Game[] = [];
-export const media: MediaItem[] = [];
+export const albums: Album[] = [
+  { title: 'The College Dropout', cover: '/personal/albums/the_college_dropout.jpg' },
+  { title: 'The Forever Story', cover: '/personal/albums/the_forever_story.jpg' },
+  { title: 'SUMMERTIDE', cover: '/personal/albums/summertide.jpg' }
+];
+export const games: Game[] = [
+  { title: 'Library of Ruina', image: '/personal/games/library_of_ruina.jpg' },
+  { title: 'Arknights', image: '/personal/games/arknights.jpg' }
+];
+export const media: MediaItem[] = [
+  { title: 'Fate/Stay Night', kind: 'photo', src: '/personal/games/fate_stay_night.jpg' },
+  { title: 'Interstellar', kind: 'photo', src: '/personal/games/interstellar.jpg' },
+  { title: 'Chainsaw Man', kind: 'photo', src: '/personal/games/chainsaw_man.jpg' }
+];
