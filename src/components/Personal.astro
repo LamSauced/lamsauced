@@ -17,7 +17,7 @@ const addHint = 'add entries in src/data/personal.ts + files in public/personal/
 
   <div class="personal-sub">
     <h3>Albums</h3>
-    <div class="tile-grid">
+    <div class="tile-grid tile-grid-square">
       {albums.map((a) => (
         <PersonalTile title={a.title} src={a.cover} />
       ))}
@@ -30,7 +30,7 @@ const addHint = 'add entries in src/data/personal.ts + files in public/personal/
 
   <div class="personal-sub">
     <h3>Games</h3>
-    <div class="tile-grid">
+    <div class="tile-grid tile-grid-wide">
       {games.map((g) => (
         <PersonalTile title={g.title} src={g.image ?? '/avatar.png'} url={g.url} />
       ))}
@@ -43,7 +43,7 @@ const addHint = 'add entries in src/data/personal.ts + files in public/personal/
 
   <div class="personal-sub">
     <h3>Media</h3>
-    <div class="tile-grid">
+    <div class="tile-grid tile-grid-poster">
       {media.map((m) => (
         <PersonalTile title={m.title} src={m.src} url={m.url} />
       ))}

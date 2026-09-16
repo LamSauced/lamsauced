@@ -479,6 +479,22 @@ details[open].role .chevron {
   font-size: 0.88rem;
 }
 
+.edu-points {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.edu-points li {
+  margin-bottom: 0.2rem;
+}
+
+.edu-points strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .badge {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -525,6 +541,15 @@ details[open].role .chevron {
 
 .project-name .icon {
   color: var(--text-muted);
+}
+
+.project-context {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-top: -0.25rem;
 }
 
 .project-desc {
@@ -661,6 +686,27 @@ details[open].role .chevron {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
+}
+
+/* Column widths and crops follow each set's native aspect ratio. */
+.tile-grid-square {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.tile-grid-wide {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.tile-grid-poster {
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+.tile-grid-square .tile img {
+  aspect-ratio: 1 / 1;
+}
+
+.tile-grid-poster .tile img {
+  aspect-ratio: 2 / 3;
 }
 
 .tile {

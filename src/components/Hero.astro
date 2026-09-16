@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import DownloadIcon from './icons/DownloadIcon.astro';
 import GitHubIcon from './icons/GitHubIcon.astro';
 import LinkedInIcon from './icons/LinkedInIcon.astro';
 import MailIcon from './icons/MailIcon.astro';
@@ -32,6 +33,10 @@ import PinIcon from './icons/PinIcon.astro';
     <a class="btn" href={site.linkedin} target="_blank" rel="noreferrer">
       <LinkedInIcon />
       LinkedIn
+    </a>
+    <a class="btn" href={site.resume} download>
+      <DownloadIcon />
+      Resume
     </a>
   </div>
 </header>

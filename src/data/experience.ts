@@ -23,18 +23,17 @@ export const experience: Organization[] = [
         end: 'Jul 2024',
         duration: '7 months',
         bullets: [
-          'Mentored new interns during the summer 2024 internship program.',
-          'Studied React and deployed a React-based app with guides on BrightScript functionality for interns to use as a side project alongside mentoring duties.',
+          'Mentored ~30 incoming software engineering interns throughout the 2024 internship program, handling technical onboarding, architectural code reviews, and project guidance.',
+          'Architected and deployed a full-stack React companion app with interactive BrightScript development guides and project documentation to streamline intern onboarding.',
         ],
       },
       {
-        title: 'Software Programmer',
+        title: 'Software Programmer Intern',
         start: 'Jun 2023',
         end: 'Aug 2023',
         duration: '3 months',
         bullets: [
-          "In charge of programming a TV app for the team's workshop.",
-          'Self-taught BrightScript and Scenegraph; coded ~80% of the app.',
+          'Independently mastered BrightScript and SceneGraph to build ~80% of a production-ready Roku TV application for a company-wide technical showcase.',
         ],
       },
       {
@@ -59,9 +58,8 @@ export const experience: Organization[] = [
         end: 'Jun 2024',
         duration: '11 months',
         bullets: [
-          'Secured Windows Server systems.',
-          'Monitored incoming and outgoing requests.',
-          'Managed network users and prevented malicious attacks.',
+          'Hardened Windows Server systems and configured Active Directory security policies.',
+          'Monitored incoming and outgoing requests, managed network users, and closed off malicious access.',
         ],
       },
       {
@@ -115,9 +113,9 @@ export const experience: Organization[] = [
         end: 'Jun 2024',
         duration: '1 yr 2 mo',
         bullets: [
-          'Guided the direction of the programming team for the 2023–2024 FRC season.',
+          'Directed robot software architecture and structured the team codebase for the 2023–2024 FRC season.',
+          'Coached 10+ junior developers in Java, WPILib, and Git workflows.',
           'Communicated with other subteams and the project manager to ensure completion of the robot.',
-          'Coached new programmers on robot code and Java.',
         ],
       },
       {

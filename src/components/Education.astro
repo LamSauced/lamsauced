@@ -14,6 +14,15 @@ import { education } from '../data/education';
           <strong>{e.school}</strong>
           {e.detail ? <span> — {e.detail}</span> : null}
           {e.note ? <span class="edu-note">{e.note}</span> : null}
+          {e.points && (
+            <ul class="edu-points">
+              {e.points.map((p) => (
+                <li>
+                  <strong>{p.label}:</strong> {p.text}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div class="edu-right">
           {e.current ? <span class="badge">Current</span> : null}
